@@ -1,0 +1,92 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+
+<!-- Style for ministry -->
+{% block style2 %}
+{% endblock%}
+<!-- body content of th ministry -->
+{% block content %}
+
+
+    <div class="container">       
+        
+        <div class="col-md-12">
+                <div class="col-md-7">  
+                 
+                <img src="{% static 'evan.jpg' %}" alt="Disciple" width="100%" height="100%">  
+                <br><br/>        
+            
+                
+            <!-- Evangelical Ministry Explanation -->
+            <div id="evangelicalminister" style="text-align: justify; font-size:17px;">
+                    <h3 style="color: brown">Evangelical Ministry.</h3>
+                    <p>     
+                        <p>Within Christianity, evangelical ministry is a ministry whose chief aim is to win converts to Christ. A minister who is involved primarily in evangelistic ministry is called an evangelist. In addition to vocational evangelists, Catholic Charismatic Renewal trains and  encourage their people to become involved in evangelistic ministry by sharing their faith with others.
+                            </p>
+                             <p>In the Bible, the word evangelist comes from the Greek word "evangelion," which means "to bring good news." While evangelistic ministries use a wide range of methodologies, they all focus on one basic task: proclaiming the gospel -- or "good news." Christian denominations differ in their exact definition of what proclaiming the gospel entails, but all evangelism -- regardless of the denomination -- is designed to draw people to follow Christ.</p>
+                            <p>The primary responsibility is to preach God's Word, telling people simply and clearly what God says concerning His Son Jesus Christ and what He has done for all. This is done with urgency because the souls of people are at stake. ... God has given the message and the evangelist is to be faithful to every word.</p>
+                            
+                    </div>
+            <br><br>
+            </div>
+            <!-- upcoming event Form -->
+            <div class="col-md-5" >    
+                    
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#msg" style="float:left ; padding:5px;">
+        <h4>Upload Info!</h4>
+    </button>
+
+    <div id="msg" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <!-- modal form header -->
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h2 style="color:#e74c3c"><b>FILL THE FORM</b></h2>
+    </div>
+    <div class="modal-body" style="margin-left: 40px;">
+    <!-- modal form body -->
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <legend class="border-bottom mb-4">Join Today
+                    {{ form.as_p }}
+                </legend>
+            </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="Submit">
+                        Upload
+                    </button>
+                </div>
+            </form>
+            {% if uploaded_images_url %}
+            <p>Image uploaded at: <a href="{{ uploaded_images_url }}">{{ uploaded_images_url }}</a></p>
+          {% endif %}
+            <div class="border-top pt-3">
+                <small class="text-mitted">
+                    Already have an account!
+                    <a class="md-2" href="{% url 'eventgelic' %}"></a>
+                </small>
+            </div>
+        
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+        </div></div>
+        </div>
+
+
+        <a href="{% url 'min_evang' %}" class="btn btn-alart" style="float:left ; padding:5px;" target="blank">
+                <h4>Ministry Page</h4>
+        </a>
+                    </div> 
+                        </div>
+                    </div></div>
+    </div></div>
+
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+
+<!-- Style for ministry -->
+{% block style2 %}
+{% endblock%}
+<!-- body content of th ministry -->
+{% block content %}
+    <div class="container">        
+        <div class="col-md-12">
+                <div class="col-md-7">                   
+                <img src="{% static 'shephered.png' %}" alt="Disciple" width="100%" height="100%">  
+                <br><br/>  
+            <!-- Leadership Explanation -->
+            <div id="teachingminister" style="text-align: justify; font-size:17px;">
+                    <h3 style="color: brown;">Charismatic Leadership</h3>
+                    <p>     
+                        The charismatic leader is distinguished from other leaders by his capacity 
+                        to inspire loyalty toward himself as the source of authority, apart from an established status. Charismatic appeal is validated through the perceptions of the followers. Its possession depends upon the leader's ability to draw upon and manipulate the body of myth in a given culture and the actions and values associated with these myths. Attributes of the charismatic leader tend to vary from society to society. In new states the breakdown of traditional and colonial-legal systems of authority produces conditions of uncertainty conducive to the emergence of charismatic leadership. Through strategies of cultural management, the charismatic leader legitimizes his claims by associating with himself the sacred symbols of the culture. Disintegration of nationalist unity after independence often makes incompatible the simultaneous pursuit of the two goals of political development: the consolidation of the state and the growth of central government capacity to modernize. Charismatic appeal is initially concentrated on and contributes to the achievement of national cohesion.
+                        </p>
+                    </div>
+            <br><br>
+            </div>
+            <!-- upcoming event Form -->
+            <div class="col-md-5" > 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#msg" style="float:left ; padding:5px;">
+        <h4>Upload Upcoming Events!</h4>
+    </button>
+    <div id="msg" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <!-- modal form header -->
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h2 style="color:#e74c3c"><b>FILL THE FORM</b></h2>
+    </div>
+    <div class="modal-body" style="margin-left: 40px;">
+    <!-- modal form body -->
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <legend class="border-bottom mb-4">Join Today
+                    {{ form.as_p }}
+                </legend>
+            </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="Submit">
+                        Upload
+                    </button>
+                </div>
+            </form>
+            {% if uploaded_images_url %}
+            <p>Image uploaded at: <a href="{{ uploaded_images_url }}">{{ uploaded_images_url }}</a></p>
+          {% endif %}
+            <div class="border-top pt-3">
+                <small class="text-mitted">
+                    Already have an account!
+                    <a class="md-2" href="{% url 'eventlead' %}"></a>
+                </small>
+            </div>        
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+        </div></div>
+        </div>
+
+
+        <a href="{% url 'eventlead' %}" class="btn btn-alart" style="float:left ; padding:5px;" target="blank">
+                <h4>Back to Secretary Page</h4>
+        </a>
+                    </div> 
+                        </div>
+                    </div></div>
+    </div></div>
+
+
+{% endblock %}

@@ -1,0 +1,52 @@
+<body>
+    <table class="table table-striped table-bordered table-hover" style="width:70%;font-size: 17px;text-align: left;" border="1">
+        <thead>
+            <tr>
+                <th>first_name</th>
+                <th>middle_name</th>
+                <th>last_name</th>
+                <th>gender</th>
+                <th>birthdate</th>
+                <th>marital_status</th>
+                <th>email</th>
+                <th>next_of_kin</th>
+                <th>nok_phone</th>
+                <th>family_name</th>
+                <th>village</th>
+                <th>home_town</th>
+                <th>lga_of_origin</th>
+                <th>state_of_origin</th>
+                <th>nationality</th>
+                <th>residential_address</th>
+                <th>ministry</th>
+                <th>date_joined</th>                 
+            </tr>
+        </thead>
+        <tbody>
+         
+    {% for x in evi %}
+    <tr>
+    <td>{{x.first_name}}</td>
+    <td>{{x.middle_name}}</td>
+    <td>{{x.last_name}}</td>
+    <td>{{x.gender}}</td>
+    <td>{{x.birthdate}}</td>
+    <td>{{x.marital_status}}</td>
+    <td>{{x.email}}</td>
+    <td>{{x.next_of_kin}}</td>
+    <td>{{x.nok_phone}}</td>
+    <td>{{x.family_name}}</td>
+    <td>{{x.village}}</td>
+    <td>{{x.home_town}}</td>
+    <td>{{x.lga_of_origin}}</td>
+    <td>{{x.state_of_origin}}</td>
+    <td>{{x.nationality}}</td>
+    <td>{{x.residential_address}}</td>
+    <td>{{x.ministry}}</td>
+    <td>{{x.date_joined} </td>
+</tr>  
+    {% endfor %}
+
+</tbody>
+</table>
+</body>

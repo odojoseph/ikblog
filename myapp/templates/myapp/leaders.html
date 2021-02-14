@@ -1,0 +1,21 @@
+<body>
+   
+    {% for x in res %}
+    <table style="width: 50%; border: 1px solid#333;">
+        <tr>
+            <th>Name</th>
+            <th>Tel:</th>
+            <th>Position:</th>
+            <th>Date:</th>
+            <th>Address:</th>            
+        </tr>
+        <tr>
+                <td>{{ x.name }}</td>  
+                <td>{{ x.tel }}</td>   
+                <td>{{ x.position }}</td>   
+                <td>{{ x.date }}</td>   
+                <td>{{ x.address }}</td>                             
+            </tr>
+        </table>
+    {% endfor %}
+</body>

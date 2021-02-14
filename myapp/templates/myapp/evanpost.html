@@ -1,0 +1,49 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+
+<!-- Style for ministry -->
+{% block style2 %}
+
+
+
+{% endblock%}
+<!-- body content of th ministry -->
+{% block content %}
+                        {% for x in evp %}
+                        <tr>
+                        <td>{{x.first_name}}</td>
+                        <td>{{x.middle_name}}</td>
+                        <td>{{x.last_name}}</td>
+                        <td>{{x.gender}}</td>
+                        <td>{{x.birthdate}}</td>
+                        <td>{{x.marital_status}}</td>
+                        <td>{{x.email}}</td>
+                        <td>{{x.next_of_kin}}</td>
+                        <td>{{x.nok_phone}}</td>
+                        <td>{{x.family_name}}</td>
+                        <td>{{x.village}}</td>
+                        <td>{{x.home_town}}</td>
+                        <td>{{x.lga_of_origin}}</td>
+                        <td>{{x.state_of_origin}}</td>
+                        <td>{{x.nationality}}</td>
+                        <td>{{x.residential_address}}</td>
+                        <td>{{x.ministry}}</td>
+                        <td>{{x.date_joined}} </td>
+                    </tr>  
+                        {% endfor %}
+                    
+                    </tbody>
+                    </table>
+                   
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+               
+            </div>
+</div></div></div>
+
+{% endblock %}
+}}

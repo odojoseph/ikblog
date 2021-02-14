@@ -1,0 +1,209 @@
+
+        {% extends "myapp/base.html" %}
+        {% load static %}
+        {% block title %}
+            saviour's will pg ccrn{% endblock %}
+
+{% block content %}
+
+<div class="container">
+<center>
+    <div class="carousel slide" id="featured" data-ride="carousel">
+        <!-- the small button at the down part of the bannerimages -->
+        <ol class="carousel-indicators"> 
+            <li data-target="#featured" data-slide-to="0" class="active"></li>
+            <li data-target="#featured" data-slide-to="1"></li>
+            <li data-target="#featured" data-slide-to="2"></li>
+            <li data-target="#featured" data-slide-to="3"></li>
+            <li data-target="#featured" data-slide-to="4"></li>
+            <li data-target="#featured" data-slide-to="5"></li>
+            <li data-target="#featured" data-slide-to="6"></li>           
+            <!-- carousel movement tag -->
+            <a class="left carousel-control"
+                    href="#featured" role="button" data-slide="prev"> 
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control"
+                    href="#featured" role="button" data-slide="next"> 
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                        <!-- end of movement tag -->
+        </ol>
+        <div class="carousel-inner">           
+    
+            <div class="item active">
+                <img src="{% static 'cath.png' %}" alt="Building" width="100%">
+            </div>   
+            <div class="item">
+                <img src="{% static 'priest.jpg' %}" alt="Building" width="100%">
+            </div>  
+
+            <div class="item ">
+                <img src="{% static 'leader1.png' %}" alt="Light" width="100%">
+                <div class="carousel-capoption">
+                </div>    
+            </div>
+            <div class="item">
+                <img src="{% static 'cc.png' %}" alt="CCRN" width="100%"> 
+                <div class="carousel-caption">
+                    
+                </div>           
+            </div>
+            <div class="item">
+                <img src="{% static 'build.jpg' %}" alt="Building" width="100%">                
+            </div>           
+            <div class="item">
+                <img src="{% static 'general.jpg' %}" alt="Light" width="100%">
+                <div class="carousel-caption">               
+                </div>
+                
+            </div></div>
+        </div>
+        <div class="col-md-12" style="background-color:rgb(202, 199, 199); box-align: center;padding-top: 20px">
+        <div class="col-md-2" style="border-right: lightblue solid;border-left: lightblue solid;"><img src="{% static 'pope2.png' %}" alt="Pope Francis" width="100%"><p><b>His Holiness<br>Pope Francis</b><br>Bishop of Rome</p></div>
+        <div class="col-md-2" style="border-right: lightblue solid;"><img src="{% static 'pauli2.png' %}" alt="Most Rev. Dr. Paulinus Ezeokafor" width="100%"><p><b>Most. Rev. Dr. Paulinus Ezeokafor</b><br>Bishop, Awka Diocese</p></div>
+        <div class="col-md-2" style="border-right: lightblue solid;"><img src="{% static 'jonas2.png' %}" alt="Most. Rev. Dr. Jonasbenson Okoye" width="100%"><p><b>Most. Rev. Dr. Jonasbenson Okoye</b><br>Aux. Bishop</p></div>
+        <div class="col-md-2" style="border-right: lightblue solid;"><img src="{% static 'attansey2.png' %}" alt="Rev. Fr. Dr. Matthew Attansey" width="100%"><p><b>Rev. Fr. Dr. Matthew Attansey</b><br>Cathedral Administrator</p></div>
+        <div class="col-md-2" style="border-right: lightblue solid;"><img src="{% static 'pa.png' %}" alt ="Rev. Fr. Paulicap C. Okoye" width="100%"><p><b>Rev. Fr. Paulicap C. Okoye</b><br>Parish Chaplain</p></div>
+        <div class="col-md-2" style="border-right: lightblue solid;"><img src="{% static 'martin2.png' %}" alt="Bro Mathin Atah" width="100%"><p><b>Bro Mathin Atah</b><br>Coordinator CCRN<br> Saviour's Will PG</p> </div>
+            
+    </div></div>
+    </center>   
+    <div class="container" >
+    <div class="row" id="contbuttom">
+    <div class="col-md-12">
+    <div class="col-md-8">
+    <h3 style="color: brown">Catholic Charismatic Renewal</h3>
+    <p style="text-align: justify;">
+        The Charismatic Renewal in the Catholic Church for which Popes John XXIII and Paul VI and the fathers of the second Vatican council prayed and which Paul VI and John Paul II later had occasion to observe, and so address in such glowing terms, first started among Catholics in January 1967 at  Duquesn University Pittsburgh, and at Notre Dame University, USA, and Since then quickly spread to all Catholic Dioceses all over the world. There are now numerous Catholic Charismatic Prayer Groups. By 1981 the statistics showed that it existed in over 101 countries. The renewal has held many International Conferences 1973, 1975, 1981, 1989 1993, 1998(in Rome) and 1978(in Dublin) 
+        and its leaders have been encouragingly received in audience by Popes Paul VI, John Paul II, Benedict XVI and Francis I. 
+        <br><br>
+        The Catholic Charismatic Renewal(CCR) had a very modest beginning. The first experience occurred among small groups of University students in 1967 at Duquesne University, Pittsburgh, Pennsylvania, University of Notre Dame, South Bend, Indiana both in the United State of America (USA). They had gathered to pray for a new Pentecost experience in their lives. The Holy Spirit did actually come upon them in power, giving them an overwhelming sense of God’s gifts and utterances in tongues and prophecy , a thirst for and insight into scriptures and ultimately touching their lives never to be the same again. 
+        </p>
+        <a href="{% url 'myapp-history' %}" target="blank">Continue Reading</a>
+        <hr>
+        <h3 style="color:brown">Saviour's Will Programme of Activities</h3>
+    <table class="table table-striped table-bordered table-hover" style="width:100%;font-size: 17px;">
+        <thead>
+        <tr class="danger">
+            <th>PROGAMMES</th>
+            <th>DAYS</th>
+            <th>TIME</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ministry Meeting</td>
+                <td>Every Monday</td>
+                <td>6.00pm - 8.00pm</td>
+            </tr>
+            <tr>
+                <td>Service-Team Meeting</td>
+                <td>Every Tuesday</td>
+                <td>6.00pm - 8.00pm</td>
+            </tr>
+        
+            <tr>
+                <td>Bible Discussions</td>
+                <td>Wednesdays</td>
+                <td>6.00pm - 8.00pm</td>
+            </tr>
+            <tr>
+                    <td>Prayer Meetings</td>
+                    <td>Thursdays</td>
+                    <td>6.00pm - 8.00pm</td>
+                </tr>
+            <tr>
+                    <td>Wings Meetings</td>
+                    <td>1st  Wednesday of the Month.</td>
+                    <td>6.00pm - 8.00pm</td>
+                </tr>
+            <tr>
+                    <td>Pre- Deliverance Counseling/Prayers</td>
+                    <td>2nd Sunday of the Month</td>
+                    <td>8.30am- 1.00pm</td>
+                </tr>
+            <tr>
+                    <td>Jesus Clinic for the Pregnant Women</td>
+                    <td>3rd Sunday of the month</td>
+                    <td>8.30 -10.00am</td>
+                </tr>
+            <tr>
+                    <td>Triduum (Monthly 3 days Prayer)</td>
+                    <td>2nd Week of the Month-Wed, Thur and Friday (Holy Ghost Power Night)</td>
+                    <td>8.00pm daily</td>
+                </tr>
+            <tr>
+                    <td>Deliverance Night</td>
+                    <td>Every 3 months</td>
+                    <td>9.00pm till dawn</td>
+                </tr>
+            <tr>
+                    <td>life In The Spirit Seminar</td>
+                    <td>August - September.</td>
+                    <td>12noon to 4pm</td>
+                </tr>
+            <tr>
+                    <td>Prayers Of Handing Over New Year </td>
+                    <td>1st quarter of the year.</td>
+                    <td>6pm to 9pm</td>
+                </tr>
+            <tr>
+                    <td>End of the Year Revival</td>
+                    <td>November/December</td>
+                    <td>6pm to 9pm</td>
+                </tr>
+            <tr>
+                <td>Annual Marriage Seminar</td>
+                <td>At least once in a year.</td>
+                <td>Depends on the arrangements</td>
+            </tr>
+            <tr>
+                    <td>Annual Youth Seminar</td>
+                    <td>At least once in a year.</td>
+                    <td>Depends on the arrangements</td>
+                </tr>
+            <tr>
+                    <td>Pentecost Week Prorammes</td>
+                    <td>Once in a year</td>
+                    <td>6pm - 8pm</td>
+                </tr>
+        </tbody>
+    </table>   
+    
+    </div>
+                <!-- upcoming event display -->
+    <div class="col-md-4" style="background-color:lavender;">    
+
+            <h3 style="color:brown; ">Up-Coming Events</h3>  
+            {% for x in ad %}    
+            <table>   
+            <tr>        
+            <td><h4> {{ x.title }}</h4></td>
+            <td rowspan=3 >
+                {% if x.event_img %}
+                <img src="{{ x.event_img.url }}" class="img-responsive img-thumbnail" alt="Member" style="border-radius: 0%; max-width: 100px; float: right;">
+                {% else %}
+                <p>No image</p> 
+                {% endif %}  
+            </td>
+            </tr>
+            <tr>
+            <td valign=middle>
+            <p class=" text-muted">by: {{ x.anouncer }} | {{ x.created_on }}</p>
+            </td>
+            </tr>
+            <tr>    
+            <td valign=middle style="overflow-wrap: break-word;word-break: break-all;">
+        <p class="card-text ">{{ x.content |slice:":200" }}</p>
+        </td>
+       
+    </tr>                   
+        </table>                   
+        {% endfor %}
+            </div> 
+    </div></div></div> 
+
+    
+
+{% endblock %}

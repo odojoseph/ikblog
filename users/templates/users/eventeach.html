@@ -1,0 +1,108 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+
+<!-- Style for ministry -->
+{% block style2 %}
+{% endblock%}
+<!-- body content of th ministry -->
+{% block content %}
+
+
+<div class="container">
+<div class="col-md-12">
+    <div class="col-md-7">          
+    <img src="{% static 'teaching.jpg' %}" alt="Disciple" width="100%" height="100%">  
+    <br><br/>        
+<!-- Teaching Ministry Explanation -->
+<div id="teachingminister" style="text-align: justify; font-size:17px;">
+        <h3 style="color: brown">Teaching Ministry in CCR</h3> <i>Ephesians 4:11, Acts 6:4</i><br>
+        <p>    
+            <b>What is teaching ministry? </b>
+            It is an organization or group in the ccrn whose major assignment is to see to the growth of the community or church through the teaching and explanation of the word of God. 
+            By virtue of our Baptism and Confirmation, we are called to evangelize and proclaim Christ to the world. The goal of the Teaching Ministry is to proclaim the “Kerygma”, which is the basic message of Salvation.
+        <br><br>“There is no true evangelization if the name, the teaching, the life, the promises, the kingdom and the ministry of Jesus of Nazareth, the Son of God are not proclaimed” (Evangelii Nuntiandi, Apostolic Exhortation of His Holiness, Pope Paul VI, No.22, 1975)
+        <br><br>Members of the teaching Ministry are to teach about the PERSON and MESSAGE of JESUS CHRIST, who is both the messenger and the message. This call to evangelization makes some people to call this ministry ‘Evangelical’ Ministry.
+        <br><br>At Prayer Meetings, members of the Teaching Ministry anchors the period allotted tor reading inspired texts from the Scripture, and sharing of a personal sense from the Lord. It’s their role to admonish, instruct, preach or teach within the community. 
+        <br><br>TM educates, edifies and continuously feeds the body of Christ with the Word of God. They also meet to organize topics and to make adequate preparation for teaching, one-on-one ministration, as well as public outreach. It is also the duty of the teaching ministry to handles teaching in the Bible Study of the community and the Life in the Spirit seminar.
+        <br><br>The tools of the Teaching Ministers are: The Bible, The Catechism of the Catholic Church (CCC), Vatican II Documents, Papal Teaching, Writings of the Early Church Fathers, and other Publications of the CCR with nihil obstat and imprimatur.
+        </p><br><br>
+            <ol>
+                
+        <li><b>Why the need for teaching ministry in the CCRN?</b><br> </li>   
+            <li>Because the growth of any church or community is determined by the knowledge of the word of God they have. </li>
+            <li>Because there are so many erroneous beliefs and teachings going on in the world, it is only in the church 
+                that one can hear and know the truth, (1tim. 3:15) that is why God instituted teaching ministry </li>
+            <li>God ordained and instituted teaching ministry in the CCRN in order to call his children in order through the word of God. </li>
+           <li>God want to address every risen issues affecting his church through the ministration and teaching of his word. </li></ol><br>
+            <br>
+           <ol><b>DUTIES OF TEACHING MINISTRY IN THE CCRN. </b><br>
+            <li>They oversee every fellowship of the ccrn. Like, Bible study, prayer meeting, etc </li>
+            <li>They teach and explain to the people of God, through the word of God the truth and the mind of God concerning every issues of life, like.. Divorce, sexuality, politics, marriage. Etc </li>
+            <li>They bring out topics based on issues confronting the people of God as per time and addresses it through the ministration of the word of God. </li>
+            <li>They equally carry out some other assignments given to them by the service team of the community</li> </ol>
+            <ol><br>
+                    <b>QUALITIES OF A GOOD AND EFFECTIVE TEACHING MINISTER</b><br>
+                    <li>He or she must be holy. Rom.2:21-23, Isaiah 52:11, psalm 51:12-13.</li>
+                    <li>Knowledge of the scripture is a must. Matt.22:29, prov 11:9,</li>
+                    <li>He or she must be a student of the scripture. 2tim 2:15</li>
+                    <li>He or she must know the teachings of the church and the guidelines of the Ccrn</li>
+                    <li>He or she must be informative, both scripturaly, socially, politicaly etc</li>
+                    <li>Prayerfulness is a must. Ephesians 6:18-19, Colosians 4:3.</li>
+                    <li>Humility is a must 2Corinthians 12:2-11</li>
+            </ol>
+        </div></div>
+<!-- upcoming event Form -->
+<div class="col-md-5" > 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#msg" style="float:left ; padding:5px;">
+<h4>Upload Info!</h4>
+</button>
+<div id="msg" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<!-- modal form header -->
+<div class="modal-header">
+<button class="close" data-dismiss="modal">&times;</button>
+<h2 style="color:#e74c3c"><b>FILL THE FORM</b></h2>
+</div>
+<div class="modal-body" style="margin-left: 40px;">
+<!-- modal form body -->
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <legend class="border-bottom mb-4">Join Today
+            {{ form.as_p }}
+        </legend>
+    </div>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="Submit">
+                Upload
+            </button>
+        </div>
+    </form>
+    {% if uploaded_images_url %}
+    <p>Image uploaded at: <a href="{{ uploaded_images_url }}">{{ uploaded_images_url }}</a></p>
+  {% endif %}
+    <div class="border-top pt-3">
+        <small class="text-mitted">
+            Already have an account!
+            <a class="md-2" href="{% url 'eventeach' %}"></a>
+        </small>
+    </div>
+    </div>
+    <!-- modal footer -->
+    <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+</div></div>
+</div>
+<a href="{% url 'min_teach' %}" class="btn btn-alart" style="float:left ; padding:5px;" target="blank">
+        <h4>Ministry Page</h4>
+</a>
+            </div> 
+                </div>
+            </div></div>
+</div></div>
+{% endblock %}
+    

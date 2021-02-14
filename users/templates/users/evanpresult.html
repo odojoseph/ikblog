@@ -1,0 +1,42 @@
+<body>
+    <table class="table table-striped table-bordered table-hover" style="width:70%;font-size: 17px;text-align: left;" border="1">
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>slug</th>
+                <th>author</th>
+                <th>updated_on</th>
+                <th>content</th>
+                <th>created_on</th>
+                <th>status</th>                
+            </tr>
+        </thead>
+        <tbody>
+         
+    {% for x in evp %}
+    <tr>
+    <td>{{x.title}}</td>
+    <td>{{x.slug}}</td>
+    <td>{{x.author}}</td>
+    <td>{{x.updated_on}}</td>
+    <td>{{x.content}}</td>
+    <td>{{x.created_on}}</td>
+    <td>{{x.status}}</td>   
+</tr>  
+    {% endfor %}
+
+</tbody>
+</table>
+
+{% for x in evp %}
+<h2>{{x.title}}</h2>
+<p>{{x.slug}}</p>
+<p>{{x.author}}</p>
+<p>{{x.updated_on}}</p>
+<p>{{x.content}}</p>
+<p>{{x.created_on}}</p>
+<p>{{x.status}}</p>
+{% endfor %}
+
+
+</body>

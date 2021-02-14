@@ -1,0 +1,176 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+<!-- Style for ministry -->
+{% block style2 %}
+{% endblock%}
+<!-- body content of th ministry -->
+{% block content %}
+<div class="container">                   
+    <div class="row">    
+<div class="col-md-12">
+<a href = "#record"  data-toggle="collapse"> 
+<h5 style="margin-left: 15px">our members</h5>
+    </a>
+<div id="record" class="collapse " style="overflow: scroll;">                                        
+    <h3>List of Ministry Members:</h3>                     
+    <table class="table table-striped table-bordered table-hover" style="width:100%;font-size: 15px;text-align: left;" border="1">      
+        <thead>
+            <tr>
+                <th>first_name</th>
+                <th>middle_name</th>
+                <th>last_name</th>
+                <th>gender</th>
+                <!-- <th>birthdate</th> -->
+                <th>phone_number</th>
+                <th>marital_status</th>
+                <th>email</th>
+                <th>next_of_kin</th>
+                <th>next_of_kin_phone</th>
+                <th>family_name</th>
+                <th>village</th>
+                <th>home_town</th>
+                <th>lga_of_origin</th>
+                <th>state_of_origin</th>
+                <th>nationality</th>
+                <th>residential_address</th>
+                <th>ministry</th>
+                <th>date_joined</th>
+                <th>passport <td><a href = "#record"  data-toggle="collapse" class="btn btn-primary">&times; </a></td>  </th>                 
+            </tr>
+        </thead>
+        <tbody>                             
+    {% for x in vis %}                       
+    <tr>
+    <td>{{x.first_name}}</td>
+    <td>{{x.middle_name}}</td>
+    <td>{{x.last_name}}</td>
+    <td>{{x.gender}}</td>
+    <!-- <td>{{x.birthdate}}</td> -->
+    <td>{{x.phone_number}}</td>
+    <td>{{x.marital_status}}</td>
+    <td>{{x.email}}</td>
+    <td>{{x.next_of_kin}}</td>
+    <td>{{x.next_of_kin_phone}}</td>
+    <td>{{x.family_name}}</td>
+    <td>{{x.village}}</td>
+    <td>{{x.home_town}}</td>
+    <td>{{x.lga_of_origin}}</td>
+    <td>{{x.state_of_origin}}</td>
+    <td>{{x.nationality}}</td>
+    <td>{{x.residential_address}}</td>
+    <td>{{x.ministry}}</td>
+    <td>{{x.date_joined}} </td>
+    <td>
+        {% if x.passport %}
+        <img src="{{ x.passport.url }}" class="img-responsive" alt="Member" width="25%" height="25%">
+        {% else %}
+        <p>No image</p> 
+        {% endif %} 
+        </td>                        
+</tr>  
+    {% endfor %}                            
+</tbody>
+</table>                           
+<a href = "#record"  data-toggle="collapse" class="btn btn-primary"> 
+        close</a>                          
+</div>
+    <div class="col-md-7">  
+    <img src="{% static 'cc.png' %}" alt="Visitation Ministry" width="100%" height="100%">   <br><br/>  
+
+<!-- Ministry Explanation -->
+<div id="Visittationminister" style="text-align: justify; font-size:17px;">
+<p>     It is a mistaken notion to regard a ministry to the individual as something separate and distinct from regular pastoral duties."
+    <br><br>"The burden of Jesus' lifework too was a ministry to men and women one by one. . . . The record of the Master's life is made up mostly of personal contacts." '
+    <br><br>These two comments by John Sutherland Bonne11 come directly to the heart of pastoral responsibility in spiritual counseling, and the importance of the ministry of visitation.
+    <br><br>A person is fortunate indeed when he dis¬covers Jesus' way of doing anything. It is not necessary to read very far in the Gospels before one comes to the conclusion that Jesus never depended only on a series of meetings to win or convert His hearers on the spot. He preached —and no one will ever preach as Jesus did—but when it came to the specific task of winning His followers, He either went to them or called them to Him." Certainly we would do well to imitate the Master Teacher.
+    <br><br>The sole purpose of the ministry is to spread the contagion of Christian ideals, and it has been demonstrated again and again that this can best be done through personal fellowship or visitation. The minister should visit with the people in their homes. He should acquaint him¬self with their problems and their needs, rally¬ing them to faithfulness in church attendance and in Christian service, and coming close to the lambs of the flock. This he must do per¬sonally because "there is no substitute for heart-to-heart personal work."'
+    <br><br>Surely the work of the minister does not end when a person is baptized, for it is his work to strengthen the spiritual life of each church mem¬ber. Even as it is considered dishonorable for a parent to bring a child into the world and
+    neglect to properly feed and care for him, so it should be unthinkable for the minister to bring a new "child" into the faith and then fail to provide the spiritual food and direction that he needs.' "Souls for whom Christ died are perish¬ing for want of well-directed personal labor; and he has mistaken his calling who, having entered the ministry, is unwilling to do the personal work that the care of the flock de-mands."
+    <br><br>The tragic story is told of a church member who pleaded with her pastor for a year to talk with her daughter who had begun to drift from the faith. After the girl had been left to drift for twelve months, the pastor casually asked her whether she attended worldly places of amuse¬ment. Learning that she did, the pastor informed her that that was against our standards, and that she would be dropped from church fellowship. And she was.' One cannot help wondering whether the outcome might not have been en¬tirely different had the pastor fulfilled his obli¬gation as "shepherd of the flock" by calling upon this girl and seeking to guide her in a friendly manner. Suppose that at least a dozen times during those twelve months he had pleaded with that girl to give her heart com¬pletely to God; suppose that he had prayed with her each time; suppose that he had ar¬ranged for other young people of the church to surround that girl with Christian influences con¬tinually; then perhaps the story would have had a happier ending.
+    <br><br>Again it was reported that a woman, owing to circumstances beyond her control, had been unable to attend church for several months, but she had remained faithful to her baptismal vows. One weekday the pastor and the local elder called on her at her work, a job which she could not leave even to visit with them. They reported back to the church that she was no longer interested, and shortly afterward she received a notice that her name had been dropped from the church record.' One likes to think of the minister as one who is a master of good human relationships. Yet it appears that these persons had mastered the art of "inhuman relationships."
+    <br><br>It is true that the minister is busily engaged in the functions of the church and in seeking to win new converts, but never should he neglect one of the lambs of the flock who has begun to stray. When the Chief Shepherd learned that one lamb was missing, He left the ninety and nine safe in the fold and went out and searched for that lamb till He found it. He didn't say that it would be cheaper or easier to buy an-other lamb, nor did He scold or condemn the lamb when He found it, but gently He held it to His breast and carried it back to the fold. There He tenderly bathed its wounds and loved it back into the fold. So the minister must care for the lambs of the spiritual flock. Too often he feels that his sole work is preaching beautiful sermons, but he will never really win the hearts of his people so long as be has a pulpit between him and them. It is granted that he might be considered a good preacher or lecturer, but never a shepherd.
+    <br><br>In order for a minister to be truly successful he must make his parishioners his best friends, and he should be their best friend. "This rela¬tionship can exist in every church. The minister can kindle a spiritual warmth in his member¬ship by preparing a calling list and then visiting all his church members. In talking to them about their home, their children, and their relationship to God he will gain their confi¬dence and love. By praying with them he can make the family feel that they have been drawn closer to God and man."
+    <br><br> We do well to heed this valuable counsel on this point:
+    <br><br>Those who labor for God have but just begun the work when they have given a discourse in the desk. After this comes the real labor, the visiting from house to house, conversing with members of families, praying with them, and coming close in sympathy to those whom we wish to benefit. It will not detract from the dignity of a minister of Christ to be awake to see and realize the temporal bur¬dens and cares of the family he visits.
+    <br><br>So the importance of the personal ministry of visitation can never be overemphasized. Jesus went out and talked with the people in their homes. Men today, who are seeking public office, make it a point to go out and meet the man on the street to demonstrate that they have a personal interest in him. Surely the minister of the gospel can do no less in his important work of seeking to "present every man perfect in Christ Jesus." "
+    </p>
+</div>
+ <!-- Modal for registration form -->
+ <div id="register" style="padding-right:5px; float:left;">
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mymodal">
+                <h4>Register Yourself!</h4>
+            </button>
+            <div id="mymodal" class="modal fade" role="dialog" style="width:700px;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- modal form header -->
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            <h2 style="color:#e74c3c"><b>FILL THE FORM</b></h2>
+                        </div>
+                        <!-- modal form body -->
+            <div class="modal-body" style="margin-left: 40px;">
+        <form class="form-horizontal form-group" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom">
+                    New Member
+                </legend>
+                {{form.as_p}}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Submit</button>
+            </div>
+            <div class="border-top pt-3">
+                <small class="text-mutted">
+                    Already have an account!
+                    <a href="{% url 'min_visit' %}"></a>
+                </small>
+            </div>
+        </form>
+                        </div>
+                        <!-- modal footer -->
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  </div>   
+<!-- end of register form -->
+
+</div>
+<!-- upcoming event display -->
+<div class="col-md-5" style="background-color:lavender;">    
+    
+        <h3 style="color:brown; ">Up-Coming Events</h3>  
+        {% for x in it %}    
+        <table>   
+        <tr>        
+        <td><h4> {{ x.title }}</h4></td>
+        <td rowspan=3 >
+            {% if x.event_img %}
+            <img src="{{ x.event_img.url }}" class="img-responsive img-thumbnail" alt="Member" style="border-radius: 0%; max-width: 100px; float: right;">
+            {% else %}
+            <p>No image</p> 
+            {% endif %}  
+        </td>
+        </tr>
+        <tr>
+        <td valign=middle>
+        <p class=" text-muted">by: {{ x.anouncer }} | {{ x.created_on }}</p>
+        </td>
+        </tr>
+        <tr>    
+        <td valign=middle style="overflow-wrap: break-word;word-break: break-all;">
+    <p class="card-text ">{{ x.content |slice:":200" }}</p>
+    </td>
+   
+</tr>                   
+    </table>                   
+    {% endfor %}
+        </div> 
+            </div>
+        </div></div></div>   
+{% endblock %}

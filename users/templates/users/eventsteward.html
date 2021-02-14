@@ -1,0 +1,91 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+<!-- Style for ministry -->
+{% block style2 %}
+{% endblock%}
+<!-- body content of th ministry -->
+{% block content %}
+    <div class="container">        
+        <div class="col-md-12">
+                <div class="col-md-7">                   
+                <img src="{% static 'steward.jpg' %}" alt="Disciple" width="100%" height="100%">  
+                <br><br/>                  
+<!-- Steward Ministry Explanation -->
+<div id="teachingminister" style="text-align: justify; font-size:17px;">
+        <h3 style="color: brown">Steward Ministry in the CCRN.</h3>
+        <p>     
+Just like the first Christian Community founded by the Apostles, the Catholic Charismatic Renewal of Nigeria pay special attention to the physical and emotional wellbeing of her members, and ensures that all necessary arrangements are put in place for her members to conveniently encounter God in the Word, Prayers, Praise and Worship. Thus, the task of planning, preparing, arranging, monitoring, and facilitating her activities are often entrusted to the members of the Steward Ministry. 
+<br><br>The Steward Ministry is at the heart of the Catholic Charismatic Renewal, and it is made up CCRN members who are supportive, welcoming, trustful, reliable, friendly, enthusiastic about service and sensitive to the needs of others. They are individuals who deploy God’s gifts (their time, talent, treasure, bodies, friendships, natural resources, and beauty) to the Service of God. It is pertinent to know that a true call to a life of commitment and service can only come to an individual through the Sacrament of Baptism and Confirmation, for the Spirit empowers us to like Jesus who came not to be served but to serve. Stewards are called to imitate Jesus’ life and His love.
+<br><br>At Prayer Group level, the members of this ministry caters for the physical needs of members, arrange venue for fellowship, contact absent members, welcome new members, and look after the wellbeing of all members. At the diocesan, archdiocesan, provincial or national level, they fix and arrange venue for crusades, conferences, camping, workshops or any program. They also ensure the security of the venue used for our Charismatic events. The role of the Steward Ministry enables our community to be filled with grace, love, and unity.
+<br><br>Members of the Stewards Ministry play dynamic role of service depending on the should be noted that titles such as ‘Welfare Ministry’, ‘Greater Ministry’, and ‘Visitation Ministry’ all fall under the STEWARD MINISTRY as recognized at the National Level of the CCRN
+<br><br>The National Stewards Ministry (NSM) is made up of stewards with varying skills, professions, and talents, selected from different dioceses, archdiocese, and provinces across the country. At CCRN National programs, some serves as ushers, security, technicians, protocol, while others serves as organizers, planners, project managers, hosts, and information personnel within the Catholic Charismatic Renewal of Nigeria. 
+<br><br>Ministries at other levels of the Renewal, such as ‘Welfare Ministry’, ‘Greater Ministry’, and ‘Visitation Ministry’, fall under the STEWARD MINISTRY and their activities are being regulated by NSM, under the guidance of National Executive Council of the CCRN.
+<br><br>NSM organizes several programs to stewards at all other units of Steward Ministry of the Catholic Charismatic Renewal of Nigeria. Such units includes:
+<br><br>PSM - Provincial Steward Ministry
+<br><br>DSM - Diocesan (or Archdiocesan) Steward Ministry
+<br><br>PGSM - Prayer Group Steward Ministry        
+</p>
+        </div>
+            <br><br>
+            </div>
+            <!-- upcoming event Form -->
+            <div class="col-md-5" >    
+                    
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#msg" style="float:left ; padding:5px;">
+        <h4>Upload Info!</h4>
+    </button>
+
+    <div id="msg" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <!-- modal form header -->
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h2 style="color:#e74c3c"><b>FILL THE FORM</b></h2>
+    </div>
+    <div class="modal-body" style="margin-left: 40px;">
+    <!-- modal form body -->
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <legend class="border-bottom mb-4">Join Today
+                    {{ form.as_p }}
+                </legend>
+            </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="Submit">
+                        Upload
+                    </button>
+                </div>
+            </form>
+            {% if uploaded_images_url %}
+            <p>Image uploaded at: <a href="{{ uploaded_images_url }}">{{ uploaded_images_url }}</a></p>
+          {% endif %}
+            <div class="border-top pt-3">
+                <small class="text-mitted">
+                    Already have an account!
+                    <a class="md-2" href="{% url 'eventsteward' %}"></a>
+                </small>
+            </div>
+        
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+        </div></div>
+        </div>
+
+
+        <a href="{% url 'min_stewards' %}" class="btn btn-alart" style="float:left ; padding:5px;" target="blank">
+                <h4>Ministry Page</h4>
+        </a>
+                    </div> 
+                        </div>
+                    </div></div>
+    </div></div>
+
+
+{% endblock %}

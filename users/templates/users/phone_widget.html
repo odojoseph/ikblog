@@ -1,0 +1,22 @@
+<!-- User {{ obj.name }} has phone number {{ obj.phone }} -->
+{% for field in line %}
+	                <div{% if not line.fields|length_is:'1' %} class="fieldBox{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}"{% elif field.is_checkbox %} class="checkbox-row"{% endif %}>
+11	                    {% if not line.fields|length_is:'1' and not field.is_readonly %}{{ field.errors }}{% endif %}
+12	                    {% if field.is_checkbox %}
+13	                        {{ field.field }}{{ field.label_tag }}
+14	                    {% else %}
+15	                        {{ field.label_tag }}
+16	                        {% if field.is_readonly %}
+17	                            <div class="readonly">{{ field.contents }}</div>
+18	                        {% else %}
+19	                            {{ field.field }}
+20	                        {% endif %}
+21	                    {% endif %}
+22	                    {% if field.field.help_text %}
+23	                        <div class="help">{{ field.field.help_text|safe }}</div>
+24	                    {% endif %}
+25	                </div>
+26	            {% endfor %}
+27	        </div>
+28	    {% endfor %}
+29	</fieldset>

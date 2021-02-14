@@ -1,0 +1,51 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+
+    {% block content %}
+
+<div class="container">    
+    <div class="row">
+<div class="col-md-12">
+                <br><br>
+        <img src="{% static 'general.jpg' %}" alt="General Body" width="100%">    
+        </div>
+        <div class="col-md-12">
+                <img src="{% static 'cc.png' %}" alt="Savuious will Hall" width="100%">
+                <br><br>                
+            <div class="col-md-6">
+            <img src="{% static 'diocese.png' %}" alt="diocese" width="100%">
+            </div>
+            <div class="col-md-6">
+            <img src="{% static 'evan.jpg' %}" alt="Evangelical Ministry" width="100%">
+                </div>           
+        </div>
+        <hr>
+        <div class="col-md-12" style="margin-top:20px;">
+                <div class="col-md-6">
+                <img src="{% static 'steward.jpg' %}" alt="Steward Ministry" width="100%">
+                </div>
+                <div class="col-md-6">
+                <img src="{% static 'savc.png' %}" alt="Service team" width="100%">   
+                    </div>
+                    
+                        
+            </div>            
+            
+            <div class="col-md-12" style="margin-top:20px;">
+                        <img src="{% static 'build.jpg' %}" alt="Savuious will Hall" width="100%">
+                        <br><br>
+                    <div class="col-md-6">
+                            <img src="{% static 'teaching.jpg' %}" alt="diocesan Hall" width="100%">
+                                    </div>
+                                    <div class="col-md-6">
+                                            <img src="{% static 'julius1.jpg' %}" alt="General Body" width="100%">    
+                                                    </div>
+                            </div>
+                </div>
+    </div>
+    
+</div>
+{% endblock %}
+

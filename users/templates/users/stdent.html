@@ -1,0 +1,25 @@
+<body>   
+<table class="table table-striped table-bordered table-hover" style="width:70%;font-size: 17px;text-align: left;" border="1">
+    <thead>
+    <tr class="danger">
+        <th>NAME</th>
+        <th>CLASS</th>
+        <th>DATE</th>
+        <th>ADDRESS</th>
+        <th>TEL</th>
+    </tr>
+    </thead>
+    <tbody>
+            {% for x in result %}
+        <tr>
+            <td>{{ x.name }}</td>  
+            <td>{{ x.class1 }}</td>   
+            <td>{{ x.date }}</td>   
+            <td>{{ x.address }}</td>   
+            <td>{{ x.tel }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>   
+
+</body>

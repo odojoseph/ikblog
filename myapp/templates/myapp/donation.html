@@ -1,0 +1,102 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+
+{% block content %}
+
+<div class="container" >
+    <!-- <div class="row" id="contbuttom">
+    <div class="row">
+    <div class="col-md-12"> -->
+            <div class="row">
+                    <div class="col-md-12"></div>
+                    <div class="col-md-7">
+    <!-- Account Update -->
+    <form action="" method="GET|POST" style="width: 100%; border-radius:4px; background-color: lavender; padding:10px;">
+            <h3 style="color: darkblue;"><b>Make Your Donation</b></h3>
+        <table style="width: 100%">  
+        <div> <tr> 
+            <th><label class="control-label" for="name">Name:</label></th>
+            <td> <input type="text" id="name" name="user_name" placeholder="Type payers name"/></td>
+            <th> <label class="control-label" for="desc">Amount:</label></th>
+            <td> <input type="float" id="amount" name="amount" placeholder="Type amount "/></td>
+        </tr> </div>
+    <div> <tr>         
+            <th> <label class="control-label" for="email">Email:</label></th>
+            <td> <input type="email" id="email" name="email" placeholder="Type your email address "/></td>
+            <th> <label class="control-label" for="tel">Tel:</label></th>
+            <td> <input type="tel" id="tel" name="tel" placeholder="Type your phone number "/></td>
+        </tr>
+        <tr>
+            <th><label class="control-label" for="describe">Description:</label></th>
+            <td> <textarea width="100%"input type="text" id="describe" name="describe" ></textarea></td>
+        </tr>
+    
+    </div>  
+    
+    </table>      
+        <button type="submit" class="btn btn-primary">Cancel</button>
+        <button type="submit" class="btn btn-primary navbar-right" style="margin-right:5px;">continue</button>
+            <!-- </div> -->
+            </form> <hr>
+        
+        
+<!-- Cotact Form -->
+<div id="contactform" style="background-color:lavender; padding:10px;">
+    <h3>Contact Form</h3>
+    <p>Please use the form before to request any information about our community.</p>
+    <form method="POST">
+    <form class="form-horizontal form-group">
+        <label class="control-label col-sm-2" form="name">Name:</label>
+        <div class="col-ms-4">
+            <input type="text" class="form-control" id="name" placeholder="Enter your name here!" name="name">
+            </div>
+<label class="control-label col-sm-2" form="email">Email:</label>
+<div class="col-ms-4">
+<input type="email" class="form-control" id="email" placeholder="Enter your Email Address here!" name="email">
+    </div>
+    <label class="control-label col-sm-2" form="email">Message:</label>
+<div class="col-ms-4">
+    <textarea class="form-control" id="message" placeholder="Type your message here!" name="message" style="width:100%; height:50px;">
+    </textarea>                
+    </div>
+            <!-- <div class="col-sm-offset-2 col-sm-6"> -->
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+                <button type="submit" class="btn btn-primary navbar-right" style="margin-right:5px;">Reset</button>
+            <!-- </div> -->
+            </form></div></div>
+
+<!-- right widget -->
+        <div class="col-md-5">
+        <h3>HOW WILL I SHOW YOU HOW MUCH I LOVE YOU JESUS CHRIST</h3>     
+        <img src="{% static 'mony.png' %}" width="60%" />   
+        <h3><b>God Loves a Cheerful Giver</b></h3> 
+        <p>The point is this: whoever sows sparingly will also reap sparingly, and whoever sows bountifully[a] will also reap bountifully. 
+            7 Each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver.
+        <b style="color:brown;">2 Corinthians 9:6-7</b>
+        </p>         
+
+        </div>
+                </div></div>
+                <div class="clear"></div>
+    
+                <!-- Side Bar for Upcoming Evens -->
+                <!-- <div class="col-md-4" style="overflow: scroll;">
+                    <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; color:darkblue;">Upcoming Event</h2><hr>
+                    <p style="text-align: justify">There will be general meeting for the Intercessory Ministry on August</p>
+                    </div> -->
+            </div></div></div></div>
+
+            
+            <!-- <div class="col-md-4"> -->
+                    
+
+                <!-- </div>  -->
+                
+            
+            </div>
+        
+
+{% endblock %}
+}}

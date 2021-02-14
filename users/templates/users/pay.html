@@ -1,0 +1,13 @@
+{% load paystack %}
+<body>
+    <div class="container">
+        <center>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <button type="submit">Upload</button> -->
+        {% paystack_button amount=300 email="swpgccrnawka@gmail.com" %}
+    </form>
+</center>
+</div>
+</body>

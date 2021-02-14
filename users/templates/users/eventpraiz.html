@@ -1,0 +1,101 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+
+<!-- Style for ministry -->
+{% block style2 %}
+{% endblock%}
+<!-- body content of th ministry -->
+{% block content %}
+
+
+    <div class="container">
+        <!-- <div class="content-section"> -->
+               
+                        <!-- <marquee>Welcome to Intercessory Ministry Secretary Page</marquee></h2>   -->
+        
+        <div class="col-md-12">
+                <div class="col-md-7">  
+                 
+                <img src="{% static 'praise.jpg' %}" alt="Disciple" width="100%" height="100%">  
+                <br><br/>        
+            
+                
+            <!-- Praise and Worship Ministry Explanation -->
+    <div id="teachingminister" style="text-align: justify; font-size:17px;">
+            <h3 style="color:brown;">  Praise and Ministry in the CCRN.</h3>
+    <p>    Whenever the members of CCRN come together into God’s presence, the task of leading praise and worship is assigned to this ministry. The Renewal deploys Praises and thanksgiving at her gathering since this is a form of prayer that recognizes most immediately that God is God. While thanksgiving brings us through the gates of God’s throne, Praise brings us straight into God’s Court (cf. Isaiah 60:18).
+            <br><br>The fact that Praise and Worship is an essential element of our Charismatic gathering (for fellowship, workshop, meetings, conference, training, etc.) shows the importance of this ministry within the CCRN.
+            <br><br>Praise and Worship Ministry (PWM) is tasked with leading our worship during prayer meetings, crusades, conferences and conventions. They skillfully combines biblical truth with music to magnify the worth of God and the redemptive work of Jesus Christ, thereby motivating the gathered members of the renewal to join them in proclaiming and cherishing the truth about God and seeking to live all of life for the glory of God. PWM’s entire activities aim at leading people into God’s presence.
+            <br><br>Members of Praise and Worship Ministry anchors the time allotted for praise and exuberant songs, and lead others into deeper worship or singing in the Spirit. It is expected that members of this ministry be gifted with voice or skills in playing musical instruments.
+            <br><br>The National Praise and Worship Ministry (NPWM), under the guidance of the National Executive Council, regulate the affairs, activities, and modus operandi of this ministry across the Nation. As a body, NPWM governs all other units of Praise and Worship Ministry of the Catholic Charismatic Renewal of Nigeria. Such units includes:
+            <br><br>PPWM - Provincial Praise and Worship Ministry
+            <br><br>DPWM - Diocesan (or Archdiocesan) Praise and Worship Ministry
+            <br><br>PGPW - Prayer Group Praise and Worship Ministry
+            <br><br>The NPWM is made of diocesan, archdiocesan, and provincial leaders of Praise and Worship Ministry units across the country. Among the representatives from these units, leaders are often elected to govern the affair of NPWM.   
+        </p>
+            
+
+    </div>
+    <br><br>
+    </div>
+    <!-- upcoming event Form -->
+    <div class="col-md-5" >    
+                    
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#msg" style="float:left ; padding:5px;">
+        <h4>Upload Info!</h4>
+    </button>
+
+    <div id="msg" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <!-- modal form header -->
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h2 style="color:#e74c3c"><b>FILL THE FORM</b></h2>
+    </div>
+    <div class="modal-body" style="margin-left: 40px;">
+    <!-- modal form body -->
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <legend class="border-bottom mb-4">Join Today
+                    {{ form.as_p }}
+                </legend>
+            </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="Submit">
+                        Upload
+                    </button>
+                </div>
+            </form>
+            {% if uploaded_images_url %}
+            <p>Image uploaded at: <a href="{{ uploaded_images_url }}">{{ uploaded_images_url }}</a></p>
+          {% endif %}
+            <div class="border-top pt-3">
+                <small class="text-mitted">
+                    Already have an account!
+                    <a class="md-2" href="{% url 'eventpraiz' %}"></a>
+                </small>
+            </div>
+        
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+        </div></div>
+        </div>
+
+
+        <a href="{% url 'min_praiz' %}" class="btn btn-alart" style="float:left ; padding:5px;" target="blank">
+                <h4>Ministry Page</h4>
+        </a>
+                    </div> 
+                        </div>
+                    </div></div>
+    </div></div>
+
+
+{% endblock %}

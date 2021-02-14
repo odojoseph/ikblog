@@ -1,0 +1,60 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block title %}
+    elicoweb{% endblock %}
+
+{% block content %}
+<div class="container" >
+        <div class="row">
+        <div class="col-md-12">
+        <div class="col-md-8">
+                <h2 style="color:blue; "><b>News</b></h2>
+        
+                {% for x in nez %}    
+                <table>   
+                <tr>
+                <a href="#">
+                <h4> {{ x.title }}</h4>        
+                </tr>
+                <tr>
+                <p class=" text-muted">by: {{ x.author }} | {{ x.created_on }}</p>
+                </tr>
+                <tr>
+            <img src="{{ x.news_img.url }}" alt="Disciple" width="20%" height="20%" style="float:left; padding:3px; "> </a>
+            <p class="card-text ">{{ x.content |slice:":200" }}</p>
+            
+            <br><br>
+        </tr>                   
+            </table>                   
+            {% endfor %}           
+                        </div>        
+                            <!-- Side Bar for Upcoming Evens -->
+                            <div class="col-md-4">
+                                    <h3 style="color:blue; "><b>UP-COMING EVENTS</b></h3>
+        
+                                    {% for x in gevt %}    
+                                    <table>   
+                                    <tr>
+                                    <a href="#">
+                                    <h4> {{ x.title }}</h4>
+                            
+                                    </tr>
+                                    <tr>
+                                    <p class=" text-muted">by: {{ x.anouncer }} | {{ x.created_on }}</p>
+                                    </tr>
+                                    <tr>
+                                <img src="{{ x.event_img.url }}" alt="Disciple" width="20%" height="20%" style="float:left; padding:3px; "> </a>
+                                <p class="card-text ">{{ x.content |slice:":200" }}</p>
+                                
+                                <br><br>
+                            </tr>                   
+                                </table>                   
+                                {% endfor %} </div>
+                        </div></div></div></div>              
+                        <!-- <div class="col-md-4"> -->                    
+                            <!-- </div>  -->
+                        </div>
+        
+
+{% endblock %}
+}}
